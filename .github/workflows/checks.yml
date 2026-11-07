@@ -1,0 +1,16 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Check package guards and driver action arguments
+        shell: powershell
+        run: ./tests/Run-Checks.ps1

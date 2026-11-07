@@ -1,0 +1,32 @@
+# ASUS P9X79 Bluetooth Fix
+
+> A Windows driver toolkit for the ASUS P9X79 PRO onboard Qualcomm Atheros Bluetooth adapter, hardware ID USB\VID_0B05&PID_179C. Covers official driver download, package review, backup, installation and explicit adapter restart for general Bluetooth peripheral connections.
+
+Version: 1.0.0. License: MIT. Maintainer: Khayoon.
+
+The reviewed ASUS package is Qualcomm Atheros Bluetooth driver 10.0.3.22, INF date 2019-09-03, for Windows 10 x64. The original system used 10.0.1.7, dated 2016-05-18. ASUS hosts the newer signed driver under X542URV laptop support, and its signed NTamd64 INF explicitly includes USB\VID_0B05&PID_179C.
+
+The original hardware context is ASUS P9X79 PRO, Intel X79 / ASUS X79, LGA2011, Windows 10 Pro x64 build 19045. Other P9X79-family or X79 boards require their own exact radio hardware-ID check; board-family names alone do not establish compatibility. The toolkit operates at the radio/driver layer and contains no device-specific pairing helper or binaries.
+
+Bluetooth-Fix.ps1 actions: Status, Download, Review, Backup, Install and Restart. Optional parameters: PackageDirectory, WorkDirectory and WhatIf. The default working directory is %LOCALAPPDATA%\P9X79BluetoothFix. PackageDirectory identifies the extracted folder containing atheros_bth.inf.
+
+Status reads radio and driver information. Download retrieves the official ASUS archive, checks its SHA-256 and extracts it. Review checks package member hashes, exact INF hardware ID, catalog name and valid Microsoft Windows Hardware Compatibility Publisher catalog signature. Download and Review do not require the adapter to be present. Status, Backup, Install and Restart require one present exact-ID adapter and refuse ambiguous matches. Backup exports the currently selected driver and separate AthDfu packages using local published INF names. Administrator Install performs review and backup, stages the package with Windows PnPUtil /add-driver without /install, then calls UpdateDriverForPlugAndPlayDevices for USB\VID_0B05&PID_179C with flags zero. It does not force a lower-ranked driver or reboot automatically. Administrator Restart is a separate explicit native adapter restart. Backup also needs administrator permission.
+
+Preserve the separate AthDfu / BootROM driver and firmware, including AthDfu.sys and AtherosBT.bin. No ASUS/Microsoft driver files are redistributed. The toolkit adds no service or background watcher and does not change privacy settings or global USB power settings.
+
+## Project
+
+- [Repository](https://github.com/Khayoon/asus-p9x79-bluetooth-fix): Toolkit source and overview.
+- [README](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/README.md): Quick commands, action reference and hardware context.
+- [Latest release](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/releases/latest): Toolkit release package.
+- [PowerShell entry point](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/Bluetooth-Fix.ps1): Public action and parameter interface.
+- [Manual installation guide](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/docs/manual-install.md): Exact-ID review, backup, manual installation and rollback guidance.
+- [CodeMeta metadata](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/codemeta.json): Machine-readable project metadata.
+- [License](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/LICENSE): MIT license.
+- [Issues](https://github.com/Khayoon/asus-p9x79-bluetooth-fix/issues): Bug reports and usage questions.
+
+## Official references
+
+- [ASUS driver archive](https://dlcdnets.asus.com/pub/ASUS/nb/DriversForWin10/Bluetooth/Bluetooth_QualcommAtheros_Win10_64_VER100322driver_only.zip.zip): Official download for the reviewed 10.0.3.22 candidate.
+- [ASUS X542URV support](https://www.asus.com/supportonly/x542urv/helpdesk_download/): ASUS support-page context for that package.
+- [Microsoft PnPUtil documentation](https://learn.microsoft.com/en-us/windows-hardware/drivers/devtest/pnputil-command-syntax): Native Windows driver export, installation and adapter restart reference.

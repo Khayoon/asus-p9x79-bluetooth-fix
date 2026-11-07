@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-labelledby="title description">
+  <title id="title">ASUS P9X79 Bluetooth Fix</title>
+  <desc id="description">A motherboard Bluetooth driver toolkit: identify, download, back up and update.</desc>
+  <rect width="960" height="240" rx="24" fill="#102639"/>
+  <rect x="48" y="48" width="145" height="145" rx="17" fill="#173d56" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M118 69v100l31-30-61-42 61-28-31 50" fill="none" stroke="#e0f2fe" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M164 87a48 48 0 0 1 0 65m13-78a67 67 0 0 1 0 91" fill="none" stroke="#38bdf8" stroke-width="3"/>
+  <text x="236" y="96" fill="#e0f2fe" font-family="Segoe UI,Arial,sans-serif" font-size="40" font-weight="700">ASUS P9X79 Bluetooth Fix</text>
+  <text x="238" y="143" fill="#bdd9eb" font-family="Segoe UI,Arial,sans-serif" font-size="24">Identify. Download. Back up. Update.</text>
+  <text x="238" y="183" fill="#7dd3fc" font-family="Segoe UI,Arial,sans-serif" font-size="17">ONBOARD ATHEROS BLUETOOTH  ·  WINDOWS 10 x64</text>
+</svg>

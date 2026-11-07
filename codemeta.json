@@ -1,0 +1,39 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "name": "ASUS P9X79 Bluetooth Fix",
+  "description": "A Windows PowerShell driver toolkit for the ASUS P9X79 PRO onboard Qualcomm Atheros Bluetooth adapter, hardware ID USB VID_0B05 PID_179C. Downloads and reviews the official ASUS 10.0.3.22 Windows 10 x64 package, backs up current Bluetooth and AthDfu drivers, and supports explicit administrator installation and adapter restart for general Bluetooth peripheral connections. ASUS/Microsoft driver files are not redistributed.",
+  "identifier": "https://github.com/Khayoon/asus-p9x79-bluetooth-fix",
+  "url": "https://github.com/Khayoon/asus-p9x79-bluetooth-fix",
+  "codeRepository": "https://github.com/Khayoon/asus-p9x79-bluetooth-fix",
+  "issueTracker": "https://github.com/Khayoon/asus-p9x79-bluetooth-fix/issues",
+  "version": "1.0.0",
+  "license": "https://spdx.org/licenses/MIT",
+  "programmingLanguage": "PowerShell",
+  "operatingSystem": "Windows 10 x64",
+  "runtimePlatform": "Windows PowerShell",
+  "softwareRequirements": [
+    "ASUS Qualcomm Atheros Bluetooth adapter with hardware ID USB\\VID_0B05&PID_179C",
+    "Windows PnPUtil",
+    "Administrator permission for backup, installation and adapter restart"
+  ],
+  "keywords": [
+    "ASUS P9X79 PRO",
+    "P9X79",
+    "Intel X79",
+    "ASUS X79",
+    "LGA2011",
+    "Qualcomm Atheros Bluetooth",
+    "Bluetooth driver update",
+    "USB 0B05:179C",
+    "VID_0B05 PID_179C",
+    "Windows 10 x64",
+    "PowerShell"
+  ],
+  "maintainer": {
+    "@type": "Person",
+    "name": "Khayoon",
+    "url": "https://github.com/Khayoon"
+  },
+  "readme": "https://github.com/Khayoon/asus-p9x79-bluetooth-fix/blob/main/README.md"
+}

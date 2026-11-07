@@ -1,0 +1,19 @@
+# Runtime downloads, backups, logs, and vendor files stay local.
+.local/
+downloads/
+backups/
+extracted-*/
+download.json
+last-install.json
+backup.json
+*.zip
+*.cab
+*.log
+*.sys
+*.cat
+*.inf
+*.dfu
+*.bin
+*.exe
+*.pdb
+*.lnk
